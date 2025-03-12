@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Forever Love, Harshitha</title>
+    <style>
+        body {
+            background: url('https://i.postimg.cc/h4QkTFCK/9d3d5839834e57b96e88a9da6c5a43de.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .title {
+            background: rgba(0, 0, 0, 0.6);
+            color: #ff4d4d;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px black;
+        }
+        .memory {
+            font-size: 18px;
+            color: #ddd;
+            margin-top: 10px;
+        }
+        .toji-sticker {
+            display: block;
+            width: 120px;
+            height: auto;
+            margin: 15px auto;
+            filter: drop-shadow(3px 3px 5px black);
+        }
+        .quiz-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .btn {
+            background-color: #d42a2a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        #marry-section {
+            font-size: 24px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            text-shadow: 2px 2px 5px black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Harshitha, You Are My Forever & Always ❤️</div>
+        <p class="memory">A special memory, made even better with Toji! 💞</p>
+        
+        <!-- Chibi Toji Sticker -->
+        <img src="https://i.postimg.cc/Y9ZxbK4w/20df688777e3645177e9328e14a6888c.jpg" alt="Chibi Toji Sticker" class="toji-sticker">
+
+        <!-- Quiz Section -->
+        <div class="quiz-box">
+            <h2>Are We Meant to Be?</h2>
+            <p id="question">Loading question...</p>
+            <button class="btn" id="option1" onclick="checkAnswer(true)">Yes</button>
+            <button class="btn" id="option2" onclick="checkAnswer(false)">No</button>
+        </div>
+
+        <!-- Surprise Marry Section -->
+        <div id="marry-section">
+            ❤️ **Harshitha, My Love!** ❤️  
+            <p>
+                From the moment we met, I knew you were special. Every day, you make my life brighter, and my heart belongs to you completely.  
+                I want to spend my whole life loving you, making you smile, and keeping you happy.  
+                One day, I promise, I’ll make you the happiest person in the world—**I wanna marry you one day!** 💍❤️
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let questions = [
+            "Do you think I'm the luckiest person to have you?",
+            "Will you always be my forever love?",
+            "Would you marry me one day?",
+            "Do you love me as much as I love you?"
+        ];
+        let currentQuestion = 0;
+
+        function loadQuestion() {
+            document.getElementById("question").innerText = questions[currentQuestion];
+        }
+
+        function checkAnswer(isYes) {
+            if (isYes) {
+                alert("Awww! I knew it ❤️");
+            } else {
+                alert("That's not possible! You love me way too much ❤️");
+            }
+
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                document.getElementById("question").innerText = "See? We're meant to be forever ❤️";
+                setTimeout(() => {
+                    document.getElementById("marry-section").style.display = "block";
+                }, 3000);
+            }
+        }
+
+        loadQuestion();
+    </script>
+</body>
+</html>
